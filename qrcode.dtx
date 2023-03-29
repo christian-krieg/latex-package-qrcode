@@ -905,7 +905,7 @@
     \advance\qr@minipagewidth by 8\qr@modulesize%
   \fi
   \begin{minipage}{\qr@minipagewidth}%
-    \baselineskip=\qr@modulesize%
+  {\offinterlineskip
     \ifqr@tight\else\rule{0pt}{4\qr@modulesize}\par\fi% %Blank space at top.
     \qr@for \i = 1 to \qr@numberofrowsinmatrix{#1} by 1%
       {\ifqr@tight\else\rule{4\qr@modulesize}{0pt}\fi% %Blank space at left.
@@ -913,6 +913,7 @@
          {\qr@matrixentry{#1}{\the\i}{\the\j}}%
        \par}%
     \ifqr@tight\else\rule{0pt}{4\qr@modulesize}\par\fi%
+  }
   \end{minipage}%
 }%
 
@@ -929,7 +930,7 @@
     \advance\qr@minipagewidth by 8\qr@modulesize%
   \fi
   \begin{minipage}{\qr@minipagewidth}%
-    \baselineskip=\qr@modulesize%
+  {\offinterlineskip
     \ifqr@tight\else\rule{0pt}{4\qr@modulesize}\par\fi% %Blank space at top.
     \qr@for \i = 1 to \qr@size by 1%
       {\ifqr@tight\else\rule{4\qr@modulesize}{0pt}\fi% %Blank space at left.
@@ -939,6 +940,7 @@
          }%
        \par}%
     \ifqr@tight\else\rule{0pt}{4\qr@modulesize}\par\fi%
+  }
   \end{minipage}%
 }%
 
